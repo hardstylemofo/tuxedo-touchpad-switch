@@ -18,17 +18,10 @@ $ cmake ..
 $ sudo make install
 $ sudo reboot
 ```
-
-There is also a target `make package` which is fine for testing, but it will not create a debian best practices compliant .deb. For this you need to use `gbp buildpackage` as described below.
-
-## Packaging
 ```
-$ sudo apt install libudev-dev libglib2.0-dev git-buildpackage debhelper
-$ rm -r build
-$ gbp buildpackage -uc -us
-```
-A .deb package is created in the folder above the git repository.
-
+A prebuilt .deb package is already created under the Releases section.
 # Installing
-
-After installing via `make install` or using the .deb you need to reboot your system for the driver to load.
+Grab the latest .deb package and install it like this:
+  sudo dpkg -i tuxedo-touchpad-switch_1.0.4_amd64.deb
+  
+  After installing, reboot your PC.
